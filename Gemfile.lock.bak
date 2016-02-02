@@ -1,0 +1,17 @@
+PATH
+  remote: .
+  specs:
+    logstash-output-example (2.0.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  logstash-output-example!
+
+BUNDLED WITH
+   1.11.2
