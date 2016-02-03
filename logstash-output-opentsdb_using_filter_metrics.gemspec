@@ -5,6 +5,7 @@ Gem::Specification.new do |s|
   s.summary = "This output allows you to pull metrics['count'] from metrics filter and ship them to opentsdb"
   s.description = "This gem is a logstash plugin required to be installed on top of the Logstash core pipeline using $LS_HOME/bin/plugin install gemname. This gem is not a stand-alone program"
   s.authors = ["eunkyung-kim"]
+  s.homepage = 'https://github.com/eunkyungkim/logstash-output-opentsdb_using_filter_metrics'
   s.email = "paulina0206@gmail.com"
   s.require_paths = ["lib"]
 
@@ -18,5 +19,5 @@ Gem::Specification.new do |s|
 
   # Gem dependencies
   s.add_runtime_dependency "logstash-core", ">= 2.2.0", "< 3.0.0" if RUBY_PLATFORM == 'java'
-  s.add_development_dependency "logstash-devutils"
+  s.add_development_dependency "logstash-devutils", "~> 0.0", ">= 0.0.18"  if RUBY_PLATFORM == 'java'
 end

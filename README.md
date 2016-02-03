@@ -1,24 +1,41 @@
-# logstash-output-opentsdb_using_filter_metrics 플러그인 적용하기
-
-- 의존성 파일 설치
-```sh
-bundle install
-```
-- 빌드하기
-```
-gem build logstash-output-opentsdb_using_filter_metrics.gemspec
-```
-- 플러그인 설치
-```
-/kakao/program/logstash/bin/plugin install logstash-output-opentsdb_using_filter_metrics-2.0.0.gem
-```
-
 # Logstash Plugin
 
 This is a plugin for [Logstash](https://github.com/elastic/logstash).
 
 It is fully free and fully open source. The license is Apache 2.0, meaning you are pretty much free to use it however you want in whatever way.
 
+## Usage
+```
+input {
+  kafka {
+    zk_connect => "diana-kafka-zookeeper1:2181,diana-kafka-zookeeper2:2181,diana-kafka-zookeeper3:2181"
+    topic_id => "diana-put-metrics"
+    group_id => "diana-put-metrics-consumer-group"
+  }
+}
+filter {
+  metrics {
+    meter => [ "tag1|value1|tag2|value2" ]
+    add_tag => "metric"
+    ##### must be clear_interval = flush_interval
+    clear_interval => 10
+    flush_interval => 10
+    remove_field => [ "@version",  "message" ]
+  }
+}
+output {
+  # Meter key of metrics filter will be tags.
+  # Meter count value will be metric value.
+  opentsdb_using_filter_metrics {
+    host => "localhost"
+    port => 4242
+    workers => 4
+    metric_name => "test.count.diana.access"
+    tag_separator => "|"   # meter separator  
+    host => "local-hostname" # additional tag
+  }
+}
+```
 ## Documentation
 
 Logstash provides infrastructure to automatically generate documentation for this plugin. We use the asciidoc format to write documentation so any comments in the source code will be first converted into asciidoc and then into html. All plugin documentation are placed under one [central location](http://www.elastic.co/guide/en/logstash/current/).
