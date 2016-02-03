@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/logstash-output-opentsdb_using_filter_metrics.svg)](https://badge.fury.io/rb/logstash-output-opentsdb_using_filter_metrics)
+
 # Logstash Plugin
 
 This is a plugin for [Logstash](https://github.com/elastic/logstash).
