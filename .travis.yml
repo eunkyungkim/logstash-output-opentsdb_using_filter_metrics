@@ -2,9 +2,6 @@ language: ruby
 gemfile:
   - Gemfile
 
-
-script: bundle exec rspec
-
 deploy:
   provider: rubygems
   api_key: 1d9a1a9ffa6e3ce02d1f3786595edcfe
