@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'logstash-output-opentsdb_using_filter_metrics'
-  s.version         = "2.0.1"
+  s.version         = "2.0.2-alpha"
   s.licenses = ["Apache License (2.0)"]
   s.summary = "This output allows you to pull metrics['count'] from metrics filter and ship them to opentsdb"
   s.description = "This gem is a logstash plugin required to be installed on top of the Logstash core pipeline using $LS_HOME/bin/plugin install gemname. This gem is not a stand-alone program"
