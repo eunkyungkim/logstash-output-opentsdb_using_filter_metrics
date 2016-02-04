@@ -11,6 +11,7 @@ deploy:
   gem: logstash-output-opentsdb_using_filter_metrics
   on:
     repo: eunkyungkim/logstash-output-opentsdb_using_filter_metrics
+    branch: develop
 branches:
   only:
     - develop
