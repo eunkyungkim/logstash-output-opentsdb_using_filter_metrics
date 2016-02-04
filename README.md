@@ -1,4 +1,4 @@
-[![Gem Version](https://badge.fury.io/rb/logstash-output-opentsdb_using_filter_metrics.svg)](https://badge.fury.io/rb/logstash-output-opentsdb_using_filter_metrics)
+[![Build Status](https://travis-ci.org/eunkyungkim/logstash-output-opentsdb_using_filter_metrics.svg?branch=master)](https://travis-ci.org/eunkyungkim/logstash-output-opentsdb_using_filter_metrics) [![Gem Version](https://badge.fury.io/rb/logstash-output-opentsdb_using_filter_metrics.svg)](https://badge.fury.io/rb/logstash-output-opentsdb_using_filter_metrics)
 
 # Logstash Plugin
 
