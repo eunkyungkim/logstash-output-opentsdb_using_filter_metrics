@@ -2,7 +2,7 @@ language: ruby
 notifications:
   email:
   - paulina0206@gmail.com
-script: gem build logstash-output-opentsdb_using_filter_metrics.gemspec
+#script: gem build logstash-output-opentsdb_using_filter_metrics.gemspec
 deploy:
   provider: rubygems
   api_key:
