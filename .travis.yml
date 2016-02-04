@@ -1,12 +1,12 @@
 language: ruby
-
 notifications:
   email:
   - paulina0206@gmail.com
-
 script: gem build logstash-output-opentsdb_using_filter_metrics.gemspec
-
 deploy:
   provider: rubygems
-  api_key: 1d9a1a9ffa6e3ce02d1f3786595edcfe
-  gemspec: logstash-output-opentsdb_using_filter_metrics.gemspec
+  api_key:
+    secure: COlR0XZckzG12l6UDnz+N5oxslpFltk+WQU0cu617QCfB+z1IuKEPzOx/9auRG9jy2gXA9jSdSCYhuTSwXzE7RinPZ2SWK+0MYFLisMQgtTVSSdRV8/IZtKfO1YeRfbLPoBMS6tY7l41ILoDI6alWDBHrJKLlKbmVMDh5eC1QxcAdxj6495vPFJ3XdFeLxJfYEOn+EFk7ndz91YWak+gAhLr2vHBRW77ExHkrpGwO1ZPHoVdIRsSQu2kGln5eLn2UgEjdPFZ4iM+rh4wCBdHimDxYsQm3Ucs22wVreWMUJC62dpKvdyJtmV97KU2XkHyg2s/Fvl80U6IZYhlFdTh/XSMEfiEz0OLPfqATg3Lx4QbcBX1qTUu0n/owT6eS4Z751+OX2hZ2pVpaftphNKu5+1YUEgASUCLgZUnXmQRZBth2k7hLJa085zjWz0Sw/teOHoCiIrfJ0LB7RXV2ZsT5+HLNabWIhuTnGUnyHmfcFNfb5Rgsx1m8/CLxU/vkXKpyJm7FHOIaSykNns28l//MEExzUGwhetjF6BGkBOoji7oNQQe4efzk/UKGKpbpGF195KgMTuBc/8aK/BV+j43Bm9z4FYL6pA9yUQgZOAJ8e7js8JMV0U7SZIQLyf6CSBZuA5BKPzlQbjqnFvw6GVZGpn4iIV30HleCQFqXkwDrIY=
+  gem: logstash-output-opentsdb_using_filter_metrics
+  on:
+    repo: eunkyungkim/logstash-output-opentsdb_using_filter_metrics
